@@ -29,6 +29,7 @@ object SparkConsumer {
     val spark = SparkSession
        .builder()
        .appName("SparkSessionApp")
+       .enableHiveSupport()
        .getOrCreate()
 
     val df = spark
